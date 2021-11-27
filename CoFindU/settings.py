@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'CoFindU.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9or036qkgq5ij',
+        'HOST': 'ec2-52-19-164-214.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'mibgrhrjivxkpu',
+        'PASSWORD': '6ceef1861a412351ac2e878dd990974cbf9891448942749524003693153c7720',
     }
 }
 
