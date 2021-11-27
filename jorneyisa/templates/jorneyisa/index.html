@@ -14,10 +14,6 @@
     <header>
         <div class="wrapper">
             <p class="header-title">jorneyisa</p>
-            {% if user.is_authenticated %}
-            <p class="header-logIn">Welcome {{ user.username }}</p>
-            {% else %}
-            <p class="header-logIn"><a href="{{ url('social:begin', 'instagram') }}">Log in</a></p>
         </div>
     </header>
     <main>
