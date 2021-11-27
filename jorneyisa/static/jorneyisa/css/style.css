@@ -5,44 +5,89 @@ html{
 body{
     margin: 0;
 }
-header{
-    color: #fff;
-    padding: 25px;
-    background: #000;
+main{
+    padding-bottom: 20px;
 }
 .wrapper{
     position: relative;
     width: 90%;
     margin: 0 auto;
 }
-header p{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+a{
+    text-decoration: none;
+}
+header{
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    background: #000;
 }
 .header-title{
-    left: 50%;
+    margin: 0;
+}
+.header-title a{
+    color: #fff;
     text-transform: uppercase;
 }
-.header-logIn{
-    right: 0;
-}
-.map-setings{
+.map-setings,
+.main-filter{
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
+    font-size: 25px;
 }
 .map-seting-line{
     display: inline-block;
-    margin: 0 10px;
-    width: 3px;
-    height: 100%;
+    margin: 0 14px;
+    width: 2px;
+    min-height: 100%;
     background: #000;
 }
-.active-menu{
+.map-setings p{
+    margin: 0;
+    cursor: pointer;
     transition: all .5s ease;
 }
-.active-menu:hover{
+.map-setings p:hover{
+    transform: scale(1.1);
+}
+.main-filter{
+    margin: 0 auto;
+    padding-bottom: 25px;
+    flex-direction: column;
+    font-size: 20px;
+}
+.open-filter{
+    display: inline-block; 
+    margin: 0 auto; 
+    margin-bottom: 15px;
+    padding: 10px 25px;
+    border-bottom: 1px solid #000;
+}
+.open-filter p{
+    margin: 0;
+    cursor: pointer;
+}
+.filter{
+    margin: 0 auto;
+}
+.filter p{
+ display: inline-block;
+ margin: 0;
+ margin-right: 15px;
+}
+.filter p:last-child{
+ margin: 0;
+}
+
+
+
+.active-menu{
     transform: scale(1.1);
     color:red;
+}
+.map-box{
+    width: 100%;
+    min-height: 500px;
+    background: #000;
 }
