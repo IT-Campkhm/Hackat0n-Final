@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
+    'social.apps.django_app.default',
     'jorneyisa.apps.JorneyisaConfig'
 ]
 
@@ -66,6 +67,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -129,6 +132,16 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFIELS_DIRS = []
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.instagram.InstagramOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_INSTAGRAM_KEY = os.environ.get('INSTAGRAM_KEY')
+SOCIAL_AUTH_INSTAGRAM_SECRET = os.environ.get('INSTAGRAM_SECRET')
 
 import dj_database_url
 db_from_env = dj_database_url.config()

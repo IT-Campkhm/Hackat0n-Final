@@ -1,15 +1,16 @@
 from django.shortcuts import render
+from .models import *
 import folium
 
 def general(request):
+    c = Category.objects.all()
     m = folium.Map()
     m = m._repr_html_()
 
-    print(request)
-
     context = {
         'title': 'Головна сторінка',
-        'map': m
+        'map': m,
+        'category': c
     }
     return render(
         request,
