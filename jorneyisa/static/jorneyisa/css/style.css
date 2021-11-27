@@ -1,0 +1,48 @@
+html{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+}
+body{
+    margin: 0;
+}
+header{
+    color: #fff;
+    padding: 25px;
+    background: #000;
+}
+.wrapper{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+header p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-title{
+    left: 50%;
+    text-transform: uppercase;
+}
+.header-logIn{
+    right: 0;
+}
+.map-setings{
+    display: flex;
+    justify-content: center;
+}
+.map-seting-line{
+    display: inline-block;
+    margin: 0 10px;
+    width: 3px;
+    height: 100%;
+    background: #000;
+}
+.active-menu{
+    transition: all .5s ease;
+}
+.active-menu:hover{
+    transform: scale(1.1);
+    color:red;
+}

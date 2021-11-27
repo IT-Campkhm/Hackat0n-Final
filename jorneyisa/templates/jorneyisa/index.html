@@ -1,16 +1,46 @@
-{% load static %}
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="{% static 'jorneyisa/css/style.css' %}" rel="stylesheet">
-    <script src="{% static 'jorneyisa/js/index.js' %}"></script>
+    <!-- <link type="text/css" href="{% static 'jorneyisa/css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'jorneyisa/js/index.js' %}"></script> -->
+    <link rel="stylesheet" href="../../static/jorneyisa/css/style.css">
     <title>{{ title }}</title>
 </head>
 <body>
-    {% block map %}
-    {% endblock map %}
+    <header>
+        <div class="wrapper">
+            <p class="header-title">jorneyisa</p>
+            <p class="header-logIn">Log in</p>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <section class="main-menu">
+                <div class="map-setings">
+                    <p class="active-menu">Table</p>
+                    <span class="map-seting-line"></span>
+                    <p>Map</p>
+                </div>
+                <div class="main-filter">
+                    <div class="open-filter">
+                        Filter
+                    </div>
+                    <div class="filter">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                </div>
+            </section>
+            <section class="map-box">
+                {% block map %}
+                {% endblock map %}
+            </section>
+        </div>
+    </main>
 </body>
 </html>
