@@ -1,16 +1,15 @@
-{% load static %}
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="{% static 'jorneyisa/css/style.css' %}" rel="stylesheet">
-    <script src="{% static 'jorneyisa/js/index.js' %}"></script>
+    <!-- <link type="text/css" href="{% static 'jorneyisa/css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'jorneyisa/js/index.js' %}"></script> -->
+    <link rel="stylesheet" href="../../static/jorneyisa/css/style.css">
     <title>{{ title }}</title>
 </head>
-
 <body>
     <header>
         <div class="wrapper">
@@ -21,14 +20,12 @@
         <div class="wrapper">
             <section class="main-menu">
                 <div class="map-setings">
-                    <p class="active-menu"><a href="{% url 'home' %}">Map</a></p>
+                    <p class="menu-map-btm"><a href="{% url 'home' %}">&nbsp; Map</a></p>
                     <span class="map-seting-line"><span></span></span>
-                    <p><a href="{% url 'tabel_event' %}">Table</a></p>
+                    <p class="menu-table-btm"><a href="{% url 'tabel_event' %}">Table</a></p>
                 </div>
                 <div class="main-filter">
-                    <div class="open-filter">
-                        <p>Filter</p>
-                    </div>
+                    <div class="open-filter"><p>Фільтер</p></div>
                     <div class="filter">
                         <p><a>дата</a></p>
                         <p><a>місце</a></p>
@@ -36,13 +33,13 @@
                     </div>
                 </div>
             </section>
-            {% block map %}
-            {% endblock map %}
+                <!-- {% block map %}
+                {% endblock map %}
 
-            {% block table %}
-            {% endblock table %}
+                {% block table %}
+                {% endblock table %} -->
         </div>
     </main>
+    <script src="../../static/jorneyisa/js/index.js"></script>
 </body>
-
 </html>
