@@ -1,13 +1,12 @@
-<!-- {% load static %} -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link type="text/css" href="{% static 'jorneyisa/css/style.css' %}" rel="stylesheet">
-    <script src="{% static 'jorneyisa/js/index.js' %}"></script> -->
-    <link rel="stylesheet" href="../../static/jorneyisa/css/style.css">
+    <link type="text/css" href="{% static 'jorneyisa/css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'jorneyisa/js/index.js' %}"></script>
     <title>{{ title }}</title>
 </head>
 <body>
@@ -33,13 +32,13 @@
                     </div>
                 </div>
             </section>
-                <!-- {% block map %}
+                {% block map %}
                 {% endblock map %}
 
                 {% block table %}
-                {% endblock table %} -->
+                {% endblock table %}
         </div>
     </main>
-    <script src="../../static/jorneyisa/js/index.js"></script>
+    <script src="{% static 'jorneyisa/js/index.js' %}"></script>
 </body>
 </html>
