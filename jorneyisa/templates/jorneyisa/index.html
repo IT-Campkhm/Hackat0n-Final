@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="{% static 'jorneyisa/js/index.js' %}"></script>
     <title>{{ title }}</title>
 </head>
+
 <body>
     <header>
         <div class="wrapper">
@@ -16,7 +18,24 @@
         </div>
     </header>
     <main>
-        
+        <div class="wrapper">
+            <section class="main-menu">
+                <div class="map-setings">
+                    <p class="active-menu"><a href="{% url 'map' %}">Map</a></p>
+                    <span class="map-seting-line"><span></span></span>
+                    <p><a href="{% url 'tabel'}">Table</a></p>
+                </div>
+                <div class="main-filter">
+                    <div class="open-filter">
+                        <p>Filter</p>
+                    </div>
+                    <div class="filter">
+                        <p><a>дата</a></p>
+                        <p><a>місце</a></p>
+                        <p><a>подія</a></p>
+                    </div>
+                </div>
+            </section>
             <section class="map-box">
                 {% block content %}
                 {% endblock content %}
@@ -24,4 +43,5 @@
         </div>
     </main>
 </body>
+
 </html>
