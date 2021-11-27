@@ -1,0 +1,1 @@
+web: gunicorn CoFindU.wsgi --log-file -
