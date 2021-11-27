@@ -23,4 +23,4 @@ def showtable(request):
     context = {
         't': 'test'
     }
-    return render(request, 'jorneyisa/table.html')
+    return render(request, 'jorneyisa/table.html', context)
