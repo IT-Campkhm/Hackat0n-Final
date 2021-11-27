@@ -13,29 +13,14 @@
 <body>
     <header>
         <div class="wrapper">
-            <p class="header-title"><a href="index.html">jorneyisa</a></p>
+            <p class="header-title"><a href="{% url 'home' %}">jorneyisa</a></p>
         </div>
     </header>
     <main>
-        <div class="wrapper">
-            <section class="main-menu">
-                <div class="map-setings">
-                    <p class="active-menu"><a>Map</a></p>
-                    <span class="map-seting-line"><span></span></span>
-                    <p><a>Table</a></p>
-                </div>
-                <div class="main-filter">
-                    <div class="open-filter"><p>Filter</p></div>
-                    <div class="filter">
-                        <p><a>дата</a></p>
-                        <p><a>місце</a></p>
-                        <p><a>подія</a></p>
-                    </div>
-                </div>
-            </section>
+        
             <section class="map-box">
-                {% block map %}
-                {% endblock map %}
+                {% block content %}
+                {% endblock content %}
             </section>
         </div>
     </main>

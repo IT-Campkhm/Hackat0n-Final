@@ -1,5 +1,25 @@
 {% extends 'jorneyisa/index.html' %}
 
 {% block content %}
-
+<div class="wrapper">
+    <section class="main-menu">
+        <div class="map-setings">
+            <p class=""><a href="{% url 'map' %}">Map</a></p>
+            <span class="map-seting-line"><span></span></span>
+            <p class="active-menu"><a href="{% url 'tabel'}">Table</a></p>
+        </div>
+        <div class="main-filter">
+            <div class="open-filter"><p>Filter</p></div>
+            <div class="filter">
+                <p><a>дата</a></p>
+                <p><a>місце</a></p>
+                <p><a>подія</a></p>
+            </div>
+        </div>
+    </section>
+<table border="1">
+    <tr>
+        <td></td>
+    </tr>
+</table>
 {% endblock content %}

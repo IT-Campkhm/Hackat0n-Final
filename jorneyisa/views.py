@@ -17,3 +17,9 @@ def general(request):
         'jorneyisa/map.html',
         context
     )
+
+def showmap(request):
+    return render(request, 'jorneyisa/map.html')
+
+def showtable(request):
+    return render(request, 'jorneyisa/table.html')
