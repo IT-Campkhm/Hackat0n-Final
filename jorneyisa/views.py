@@ -14,7 +14,7 @@ def general(request):
     }
     return render(
         request,
-        'jorneyisa/index.html',
+        'jorneyisa/map.html',
         context
     )
 
