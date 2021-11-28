@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'CoFindU.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -87,6 +87,14 @@ DATABASES = {
         'PASSWORD': '6ceef1861a412351ac2e878dd990974cbf9891448942749524003693153c7720',
     }
 }
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 
 
 # Password validation

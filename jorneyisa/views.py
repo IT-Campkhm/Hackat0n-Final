@@ -6,14 +6,12 @@ import geocoder
 
 def general(request):
     g = geocoder.osm('UA')
-    c = Category.objects.all()
     m = folium.Map(location = [g.latlng[0], g.latlng[1]], zoom_start = 7)
     m = m._repr_html_()
 
     context = {
         'title': 'Знайди івент',
         'map': m,
-        'category': c
     }
     
     return render(
