@@ -20,15 +20,7 @@ def general(request):
     ivano_frankivsk = geocoder.osm('Ivano-Frankivsk')
     vinnitsa = geocoder.osm('Vinnitsa')
     zaporizhzhia = geocoder.osm('Zaporizhzhia')
-    сhernihiv = geocoder.osm('Chernihiv')
-    
-    event = []
-    events = Events.objects.all()
-    
-    for e in events:
-        event.append(e.title)
-        
-    print(event)   
+    сhernihiv = geocoder.osm('Chernihiv') 
     
     folium.Marker(
         [kiev.latlng[0], kiev.latlng[1]],
