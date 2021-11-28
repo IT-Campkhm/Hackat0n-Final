@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'CoFindU.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd9or036qkgq5ij',
-        'HOST': 'ec2-52-19-164-214.eu-west-1.compute.amazonaws.com',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'df2mm7lof4cop7',
+        'HOST': 'ec2-18-213-133-45.compute-1.amazonaws.com',
         'PORT': 5432,
-        'USER': 'mibgrhrjivxkpu',
-        'PASSWORD': '6ceef1861a412351ac2e878dd990974cbf9891448942749524003693153c7720',
+        'USER': 'uscqbrdckmtozf',
+        'PASSWORD': '3276111eea47339255300bb139ece0f9824d3f8db8e79619642435df1afb5abd',
     }
 }
 '''
