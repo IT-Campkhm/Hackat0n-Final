@@ -15,6 +15,7 @@ class Events(models.Model):
     description = models.TextField(blank=True)
     cout_people = models.BigIntegerField()
     place = models.TextField(blank=True)
+    location = 0
     
     def __str__(self):
         return self.title
