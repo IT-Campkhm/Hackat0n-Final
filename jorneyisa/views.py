@@ -8,7 +8,7 @@ def general(request):
     m = m._repr_html_()
 
     context = {
-        'title': 'Головна сторінка',
+        'title': 'Знайди івент',
         'map': m,
         'category': c
     }
@@ -21,6 +21,7 @@ def general(request):
 
 def showtable(request):
     context = {
+        'title': 'Список івентів',
         't': 'test'
     }
     return render(request, 'jorneyisa/table.html', context)
