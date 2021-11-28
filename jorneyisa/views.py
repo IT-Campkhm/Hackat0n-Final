@@ -87,7 +87,7 @@ def general(request):
     m = m._repr_html_()
 
     context = {
-        'title': 'Знайди івент',
+        'title': 'Знайди івент для себе',
         'map': m,
     }
     
