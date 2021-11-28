@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block table %}
+{{events}}
 {% for info in events %}
 {% if info.type == True %}
 <section class="table-box">
