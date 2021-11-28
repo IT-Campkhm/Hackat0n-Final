@@ -15,13 +15,11 @@ class Migration(migrations.Migration):
             name='Events',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.TextField()),
-                ('time', models.TextField()),
-                ('description', models.TextField()),
+                ('title', models.TextField(blank=True)),
+                ('time', models.TextField(blank=True)),
+                ('description', models.TextField(blank=True)),
                 ('cout_people', models.BigIntegerField()),
-                ('place', models.TextField()),
-                ('type', models.TextField()),
-                ('is_public', models.BooleanField(default = True)),
+                ('place', models.TextField(blank=True)),
             ],
             options={
                 'verbose_name': 'Івенти',

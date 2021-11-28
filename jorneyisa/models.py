@@ -1,13 +1,11 @@
 from django.db import models
         
 class Events(models.Model):
-    title = models.TextField()
-    time = models.TextField()
-    description = models.TextField()
+    title = models.TextField(blank=True)
+    time = models.TextField(blank=True)
+    description = models.TextField(blank=True)
     cout_people = models.BigIntegerField()
-    place = models.TextField()
-    type = models.TextField()
-    is_public = models.BooleanField(default = True)
+    place = models.TextField(blank=True)
     
     def __str__(self):
         return self.title
