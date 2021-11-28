@@ -103,6 +103,8 @@ header{
 .map-box{
     position: relative;
     width: 100%;
+}
+.map-box div{
     height: 350px;
 }
 .block-map{
