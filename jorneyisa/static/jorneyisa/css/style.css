@@ -36,6 +36,7 @@ header{
     margin-bottom: 25px;
     font-size: 25px;
 }
+
 .map-seting-line{
     display: inline-block;
     margin: 0 14px;
@@ -50,6 +51,9 @@ header{
 }
 .map-setings p:hover{
     transform: scale(1.1);
+}
+.map-setings a{
+    color: #000;
 }
 .main-filter{
     margin: 0 auto;
@@ -66,7 +70,6 @@ header{
 }
 .open-filter p{
     margin: 0;
-    cursor: pointer;
 }
 .filter{
     margin: 0 auto;
@@ -86,8 +89,54 @@ header{
     transform: scale(1.1);
     color:red;
 }
+
+
+
 .map-box{
     width: 100%;
     min-height: 350px;
     background: #000;
+}
+
+
+
+.table-box{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.table-line{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+    transition: all .5s ease;
+}
+.table-line:hover{
+    transform: scale(1.01);
+}
+.table-img-box{
+    display: inline-block;
+    margin-right: 5%;
+    width: 15%;
+}
+.table-img-box img{
+    width: 100%;
+}
+.table-text-box{
+    display: inline-block;
+    width: 80%;
+    font-size: 18px;
+}
+.table-text-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.table-place,
+.table-time{
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+    font-size: 16px;
 }
