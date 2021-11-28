@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from .models import *
 import folium
+import geocoder
+
 
 def general(request):
+    g = geocoder.ip('me')
     c = Category.objects.all()
-    m = folium.Map()
+    m = folium.Map(location = [g.latlng[0], g.latlng[1]], zoom_start = 15)
     m = m._repr_html_()
 
     context = {
@@ -20,8 +23,13 @@ def general(request):
 
 
 def showtable(request):
+    event = Events.objects.all()
     context = {
         'title': 'Список івентів',
-        't': 'test'
+        'events': event
     }
-    return render(request, 'jorneyisa/table.html', context)
+    return render(
+        request,
+        'jorneyisa/table.html',
+        context
+    )
