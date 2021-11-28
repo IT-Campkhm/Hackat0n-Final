@@ -27,7 +27,6 @@ header{
 }
 .header-title a{
     color: #fff;
-    text-transform: uppercase;
 }
 .main-menu{
     display: flex;

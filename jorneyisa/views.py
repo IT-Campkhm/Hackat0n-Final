@@ -23,86 +23,16 @@ def general(request):
     сhernihiv = geocoder.osm('Chernihiv')
     
     citys = [kiev, kharkiv, odessa, lviv, zhytomyr, khmelnytskyi, ivano_frankivsk, vinnitsa, zaporizhzhia, сhernihiv]
+    events = Events.objects.all()
     
     for city in range(len(citys)):
-        folium.Marker(
-            [citys[city].latlng[0], citys[city].latlng[1]],
-            popup = '',
-            tooltip = 'Дізнатися більше про івент.'
-        ).add_to(m)
-    '''
-    folium.Marker(
-        [kiev.latlng[0], kiev.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
+        for e in events:
+            folium.Marker(
+                [citys[city].latlng[0], citys[city].latlng[1]],
+                popup = f'{e.title}',
+                tooltip = 'Дізнатися більше про івент.'
+            ).add_to(m)
     
-    folium.Marker(
-        [kharkiv.latlng[0], kharkiv.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    folium.Marker(
-        [odessa.latlng[0], odessa.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    folium.Marker(
-        [lviv.latlng[0], lviv.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    folium.Marker(
-        [zhytomyr.latlng[0], zhytomyr.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    folium.Marker(
-        [khmelnytskyi.latlng[0], khmelnytskyi.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    folium.Marker(
-        [ivano_frankivsk.latlng[0], ivano_frankivsk.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    folium.Marker(
-        [vinnitsa.latlng[0], vinnitsa.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    folium.Marker(
-        [zaporizhzhia.latlng[0], zaporizhzhia.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    
-    folium.Marker(
-        [сhernihiv.latlng[0], сhernihiv.latlng[1]],
-        popup = '',
-        tooltip = 'Дізнатися більше про івент.',
-        icon = icon
-    ).add_to(m)
-    
-    '''
     m = m._repr_html_()
 
     context = {
