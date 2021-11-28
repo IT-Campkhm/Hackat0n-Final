@@ -1,6 +1,6 @@
 let filter = document.querySelector(".filter"),
-    openFilter = document.querySelector(".open-filter");
-    closeFilter = document.querySelector(".close-filter");
+    openFilter = document.querySelector(".open-filter"),
+    closeFilter = document.querySelector(".close-filter"),
     blockMap = document.querySelector(".block-map");
 
 openFilter.onclick = showFilter;
