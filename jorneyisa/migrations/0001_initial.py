@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('cout_people', models.BigIntegerField()),
                 ('place', models.TextField()),
                 ('type', models.TextField()),
-                ('place', models.BooleanField(default = True)),
+                ('is_public', models.BooleanField(default = True)),
             ],
             options={
                 'verbose_name': 'Івенти',
