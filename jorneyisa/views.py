@@ -27,9 +27,10 @@ def general(request):
 
     for city in range(len(citys)):
         events = Events.objects.filter(pk = city)
+        print(events[0])
         folium.Marker(
             [citys[city].latlng[0], citys[city].latlng[1]],
-            popup=f'{events.title}',
+            popup=f'{events}',
             tooltip='Дізнатися більше про івент.'
         ).add_to(m)
 
