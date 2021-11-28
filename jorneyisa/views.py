@@ -24,12 +24,12 @@ def general(request):
 
     citys = [kiev, kharkiv, odessa, lviv, zhytomyr, khmelnytskyi,
              ivano_frankivsk, vinnitsa, zaporizhzhia, сhernihiv]
-    events = Events.objects.all()
 
-    for city, event in citys, events:
+    for city in range(len(citys)):
+        events = Events.objects.all(pk=city)
         folium.Marker(
             [citys[city].latlng[0], citys[city].latlng[1]],
-            popup=f'{event.title}',
+            popup=f'{events.title}',
             tooltip='Дізнатися більше про івент.'
         ).add_to(m)
 
