@@ -10,10 +10,10 @@ def general(request):
     
     m = folium.Map(location = [ukrain.latlng[0], ukrain.latlng[1]], zoom_start = 7)
     
-    kiev = geocoder.osm('UA', 'Kiev')
-    kharkiv = geocoder.osm('UA', 'Kharkiv')
-    odessa = geocoder.osm('UA', 'Odessa')
-    lviv = geocoder.osm('UA', 'Lviv')
+    kiev = geocoder.osm('Kiev')
+    kharkiv = geocoder.osm('Kharkiv')
+    odessa = geocoder.osm('Odessa')
+    lviv = geocoder.osm('Lviv')
     
     
     folium.Marker(
