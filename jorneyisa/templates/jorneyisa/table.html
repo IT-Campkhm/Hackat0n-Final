@@ -4,7 +4,6 @@
 {% block table %}
 {{events}}
 {% for info in events %}
-{% if info.type == True %}
 <section class="table-box">
     <div class="table-line">
         <div class="table-img-box"><img src="{% static 'jorneyisa/img/disco.png' %}"></div>
@@ -16,6 +15,5 @@
         </div>
     </div>
 </section>
-{% endif %}
 {% endfor %}
 {% endblock table %}
