@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,7 @@
     <link type="text/css" href="{% static 'jorneyisa/css/style.css' %}" rel="stylesheet">
     <script src="{% static 'jorneyisa/js/index.js' %}"></script>
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="../../static/jorneyisa/css/style.css">
 </head>
 <body>
     <header>
@@ -26,12 +27,39 @@
                 <div class="main-filter">
                     <div class="open-filter"><p>Фільтер</p></div>
                     <div class="filter">
-                        <p><a>дата</a></p>
-                        <p><a>місце</a></p>
-                        <p><a>подія</a></p>
+
+                        <p>Від найновішої події</p>
+                        <p>Від найдавнішої події</p>
+                        <form action="#" method="get">
+                            <label>
+                                <select name="place">
+                                    <option value="mountain">mountain</option>
+                                    <option value="park">park</option>
+                                    <option value="city">city</option>
+                                    <option value="cafe">cafe</option>
+                                    <option value="restaurant">restaurant</option>
+                                </select>
+                            </label>
+                            <label>
+                                <select name="place">
+                                    <option value="campaign">похід</option>
+                                    <option value="vacation">відпочинок</option>
+                                    <option value="excursion">екскурсія</option>
+                                    <option value="sessions">посиденьки</option>
+                                    <option value="businessMeeting">ділова зустріч</option>
+                                </select>
+                            </label>
+                        </form>
+                        <p class="close-filter">Закрити</p>
                     </div>
                 </div>
             </section>
+                <div class="test">
+                    <div class="map"></div>
+                    <div class="block-map">
+                        <p>Натисніть на екран щоб розблокувати карту</p>
+                    </div>
+                </div>
                 {% block map %}
                 {% endblock map %}
 
@@ -40,5 +68,6 @@
         </div>
     </main>
     <script src="{% static 'jorneyisa/js/index.js' %}"></script>
+    <script src="../../static/jorneyisa/js/index.js"></script>
 </body>
 </html>
