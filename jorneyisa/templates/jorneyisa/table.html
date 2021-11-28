@@ -2,15 +2,19 @@
 {% load static %}
 
 {% block table %}
-    <section class="table-box">
-        <div class="table-line">
-            <div class="table-img-box"><img src="{% static 'jorneyisa/img/disco.png' %}"></div>
-            <div class="table-text-box">
-                <h3 class="table-text-title">Title</h3>
-                <p class="table-place">place</p>
-                <p class="table-time">time</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, distinctio itaque! Obcaecati cupiditate quam quae nobis atque. Vitae reiciendis quos, eius debitis consectetur rem laudantium, consequatur accusantium iste at deleniti!</p>
-            </div>
+{% for info in events %}
+{% if info.type == True %}
+<section class="table-box">
+    <div class="table-line">
+        <div class="table-img-box"><img src="{% static 'jorneyisa/img/disco.png' %}"></div>
+        <div class="table-text-box">
+            <h3 class="table-text-title">{{ info.title }}</h3>
+            <p class="table-place">{{ info.place }}</p>
+            <p class="table-time">{{ info.time }}</p>
+            <p>{{ info.description }}</p>
         </div>
-    </section>
+    </div>
+</section>
+{% endif %}
+{% endfor %}
 {% endblock table %}
