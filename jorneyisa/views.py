@@ -24,14 +24,11 @@ def general(request):
     
     citys = [kiev, kharkiv, odessa, lviv, zhytomyr, khmelnytskyi, ivano_frankivsk, vinnitsa, zaporizhzhia, сhernihiv]
     
-    icon = folium.features.CustomIcon('jorneyisa\static\jorneyisa\img\disco.png', icon_size=(24, 24))
-    
     for city in range(len(citys)):
         folium.Marker(
             [citys[city].latlng[0], citys[city].latlng[1]],
             popup = '',
             tooltip = 'Дізнатися більше про івент.',
-            icon = icon
         ).add_to(m)
     '''
     folium.Marker(
