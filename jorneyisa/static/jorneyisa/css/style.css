@@ -105,9 +105,10 @@ header{
 .map-box{
     position: relative;
     width: 100%;
+    height: 400px;
 }
-.map-box div{
-    height: 350px;
+#map_b66b6e98397e4a44b00846bd98d55b75{
+    height: 400px;
 }
 .block-map{
     display: flex;
