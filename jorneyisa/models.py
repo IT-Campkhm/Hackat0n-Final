@@ -12,4 +12,5 @@ class Events(models.Model):
     
     class Meta:
         verbose_name = 'Івенти'
+        verbose_name_plural = 'Івенти'
     
