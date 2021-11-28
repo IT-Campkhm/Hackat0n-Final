@@ -32,62 +32,62 @@ def general(request):
     
     folium.Marker(
         [kiev.latlng[0], kiev.latlng[1]],
-        popup = '',
+        popup = 'Improve "туса"',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [kharkiv.latlng[0], kharkiv.latlng[1]],
-        popup = '',
+        popup = 'Матч "Металіст - Динамо"',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [odessa.latlng[0], odessa.latlng[1]],
-        popup = '',
+        popup = '"Цікавинки в історії Одеси"',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [lviv.latlng[0], lviv.latlng[1]],
-        popup = '',
+        popup = '"Кавова" прогулянка',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [zhytomyr.latlng[0], zhytomyr.latlng[1]],
-        popup = '',
+        popup = 'Екстремальний відпочинок',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [khmelnytskyi.latlng[0], khmelnytskyi.latlng[1]],
-        popup = '',
+        popup = 'Чортове колесо',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [ivano_frankivsk.latlng[0], ivano_frankivsk.latlng[1]],
-        popup = '',
+        popup = 'Фото зустріч',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [vinnitsa.latlng[0], vinnitsa.latlng[1]],
-        popup = '',
+        popup = 'Фонтани',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     folium.Marker(
         [zaporizhzhia.latlng[0], zaporizhzhia.latlng[1]],
-        popup = '',
+        popup = '"Запорозька Січ"',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
     
     folium.Marker(
         [сhernihiv.latlng[0], сhernihiv.latlng[1]],
-        popup = '',
+        popup = 'Подорож Черніговом',
         tooltip = 'Дізнатися більше про івент.'
     ).add_to(m)
     
