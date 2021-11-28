@@ -14,22 +14,73 @@ def general(request):
     kharkiv = geocoder.osm('Kharkiv')
     odessa = geocoder.osm('Odessa')
     lviv = geocoder.osm('Lviv')
+    zhytomyr = geocoder.osm('Zhytomyr')
+    khmelnytskyi = geocoder.osm('Khmelnytskyi')
+    ivano_frankivsk = geocoder.osm('Ivano-Frankivsk')
+    vinnitsa = geocoder.osm('Vinnitsa')
+    zaporizhzhia = geocoder.osm('Zaporizhzhia')
+    сhernihiv = geocoder.osm('Chernihiv')
     
     
     folium.Marker(
-        [kiev.latlng[0], kiev.latlng[1]]
+        [kiev.latlng[0], kiev.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
     ).add_to(m)
     
     folium.Marker(
-        [kharkiv.latlng[0], kharkiv.latlng[1]]
+        [kharkiv.latlng[0], kharkiv.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
     ).add_to(m)
     
     folium.Marker(
-        [odessa.latlng[0], odessa.latlng[1]]
+        [odessa.latlng[0], odessa.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
     ).add_to(m)
     
     folium.Marker(
-        [lviv.latlng[0], lviv.latlng[1]]
+        [lviv.latlng[0], lviv.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
+    ).add_to(m)
+    
+    folium.Marker(
+        [zhytomyr.latlng[0], zhytomyr.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
+    ).add_to(m)
+    
+    folium.Marker(
+        [khmelnytskyi.latlng[0], khmelnytskyi.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
+    ).add_to(m)
+    
+    folium.Marker(
+        [ivano_frankivsk.latlng[0], ivano_frankivsk.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
+    ).add_to(m)
+    
+    folium.Marker(
+        [vinnitsa.latlng[0], vinnitsa.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
+    ).add_to(m)
+    
+    folium.Marker(
+        [zaporizhzhia.latlng[0], zaporizhzhia.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
+    ).add_to(m)
+    
+    
+    folium.Marker(
+        [сhernihiv.latlng[0], сhernihiv.latlng[1]],
+        popup = 'Дізнатися більше.',
+        tooltip = ''
     ).add_to(m)
     
     
