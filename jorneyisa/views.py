@@ -26,7 +26,7 @@ def general(request):
              ivano_frankivsk, vinnitsa, zaporizhzhia, сhernihiv]
 
     for city in range(len(citys)):
-        events = Events.objects.filter(pk = city)
+        events = Events.objects.get(pk = city)
         print(events)
         folium.Marker(
             [citys[city].latlng[0], citys[city].latlng[1]],
