@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'CoFindU.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'd9or036qkgq5ij',
         'HOST': 'ec2-52-19-164-214.eu-west-1.compute.amazonaws.com',
         'PORT': 5432,
