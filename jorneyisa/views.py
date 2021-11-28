@@ -15,6 +15,7 @@ def general(request):
         'map': m,
         'category': c
     }
+    
     return render(
         request,
         'jorneyisa/map.html',
