@@ -109,7 +109,7 @@ header{
     height: 450px;
 }
 .map-box iframe{
-    height: 450px;
+    height: 450px!important;
 }
 .block-map{
     display: flex;
